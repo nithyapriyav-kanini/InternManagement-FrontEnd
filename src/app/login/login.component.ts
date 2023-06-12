@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../Services/Login.Service';
 import { LoggedInUserModel } from '../Models/LoggedInUser.Model';
+import { LogModel } from '../Models/Log.Model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +11,12 @@ import { LoggedInUserModel } from '../Models/LoggedInUser.Model';
 })
 export class LoginComponent {
     loginModel:LoggedInUserModel;
-    loggedInModel:LoggedInUserModel
-    constructor(private loginService:LoginService) {
+    loggedInModel:LoggedInUserModel;
+    InTime:LogModel;
+    constructor(private loginService:LoginService,private router:Router) {
       this.loginModel=new LoggedInUserModel();
       this.loggedInModel=new LoggedInUserModel();
+      this.InTime=new LogModel();
     }
     Loginnow(){
         console.log(this.loginModel);
@@ -23,13 +27,24 @@ export class LoginComponent {
           localStorage.setItem("role",this.loggedInModel.role);
           var userid=this.loggedInModel.userId.toString();
           localStorage.setItem("id",userid);
+          this.LogInTime();
         },
         err=>{
           console.log(err);
         });
     }
-    cancel(){
-        this.loginModel.userId=0;
-        this.loginModel.password="";
+    move(){
+        this.router.navigateByUrl('register');
+    }
+    LogInTime(){
+        this.InTime.userId=this.loggedInModel.userId;
+        this.loginService.LogInTime(this.InTime).subscribe(data=>{
+          this.InTime=data as LogModel;
+          console.log(this.InTime);
+          localStorage.setItem("logId",this.InTime.id.toString())
+        },
+        err=>{
+          console.log(err);
+        });
     }
 }

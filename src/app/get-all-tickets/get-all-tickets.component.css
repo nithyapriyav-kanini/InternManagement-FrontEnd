@@ -1,0 +1,23 @@
+th,
+tr {
+  text-align: center;
+  padding: 5px;
+} 
+th {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    ;
+  }
+#table{
+    background-color: aliceblue;
+}
+
+.ticketsTable{
+    position:relative;
+        left:30%;
+        right:40%;
+        width:35%;
+        top:20%;
+        padding:0%;
+        background-color: rgb(21, 136, 236);
+}

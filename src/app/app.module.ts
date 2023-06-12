@@ -18,6 +18,7 @@ import { ChangeStatusComponent } from './change-status/change-status.component';
 import { InternService } from './Services/Intern.Service';
 import { AdminService } from './Services/Admin.Service';
 import { GetAllTicketsComponent } from './get-all-tickets/get-all-tickets.component';
+import { LogOutComponent } from './log-out/log-out.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GetAllTicketsComponent } from './get-all-tickets/get-all-tickets.compon
     AddSolutionComponent,
     GetTicketComponent,
     ChangeStatusComponent,
-    GetAllTicketsComponent
+    GetAllTicketsComponent,
+    LogOutComponent
   ],
   imports: [
     BrowserModule,
