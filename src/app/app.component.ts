@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'InternManagement';
+  role:string;
+  check:Boolean=false;
+  constructor() {
+    this.role=localStorage.getItem("role");
+    if(this.role=="Admin"){
+        this.check=true;
+    }
+  }
+  
 }

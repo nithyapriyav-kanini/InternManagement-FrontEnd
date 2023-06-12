@@ -1,0 +1,16 @@
+<div class="form-control" id="login">
+        <table id="table">
+            <tr>
+                <td><label class="form-control">User Id</label></td>
+                <td><input type="text" class="form-control" [(ngModel)]="loginModel.userId"></td>
+            </tr>
+            <tr>
+                <td><label class="form-control">Password</label></td>
+                <td><input type="text" class="form-control" [(ngModel)]="loginModel.password"></td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-success" (click)="Loginnow()">Login</button></td>
+                <td><button class="btn btn-danger" (click)="cancel()">Cancel</button></td>
+            </tr>
+        </table>
+</div>

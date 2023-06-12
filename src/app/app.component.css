@@ -1,0 +1,11 @@
+#navbar{
+    font-size: 1.5em;
+}
+#content{
+    height:40em; 
+    background-size:cover; 
+    width:auto;
+    background-image:url('D:\FrontEnd\InternManagement\src\assets\images\background.avif');
+    background-position:50% 50%;
+    background-color: rgb(21, 136, 236);
+}

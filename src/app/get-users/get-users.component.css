@@ -1,0 +1,8 @@
+.users{
+    float:left; 
+    position: relative;
+    height: 50%;
+    width:30%;
+    padding:3%;
+    left:5%;
+}

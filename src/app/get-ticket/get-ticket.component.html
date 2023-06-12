@@ -1,0 +1,12 @@
+<div class="getTicket">
+    <table class="table">
+        <tr>
+            <td><label class="form-control" >Ticket Id</label></td>
+            <td><input type="number" class="form-control" [(ngModel)]="this.tick.id"></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-success" (click)="GetTicket()">Get Ticket</button></td>
+            <td><button class="btn btn-danger">Cancel</button></td>
+        </tr>
+    </table>
+</div>

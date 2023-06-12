@@ -1,0 +1,24 @@
+th,
+td {
+  text-align: center;
+  padding: 5px;
+}
+
+.getTicket{
+        position:relative;
+        border: 5px solid rgb(47, 236, 250);
+        left:35%;
+        right:40%;
+        height:55%;
+        width:35%;
+        top:10%;
+        padding:3%;
+        background-color: aliceblue;
+}
+
+.table{
+    left:5%;
+    position: relative;
+    border-spacing: 0 15px;
+    border-collapse: separate;
+}
