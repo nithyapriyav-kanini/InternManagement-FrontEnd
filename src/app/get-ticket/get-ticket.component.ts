@@ -19,6 +19,7 @@ GetTicket(){
   this.internService.GetTicket(this.tick).subscribe(data=>{
     this.ticket=data as TicketModel;
     console.log(this.ticket);
+    alert(`Ticket Fetched Successfully\n Title : ${this.ticket.title}\nDescription : ${this.ticket.description}\nIssue Date : ${this.ticket.issuedate}\nIntern Id : ${this.ticket.internId}`);
   },
   err=>{
     console.log(err);

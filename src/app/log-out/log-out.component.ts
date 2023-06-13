@@ -20,6 +20,7 @@ export class LogOutComponent {
       this.log=data as LogModel;
       console.log(this.log);
       localStorage.clear();
+      this.router.navigateByUrl("login");
     },
     err=>{
       console.log(err);

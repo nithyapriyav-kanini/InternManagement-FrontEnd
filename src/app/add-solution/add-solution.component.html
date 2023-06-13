@@ -1,16 +1,49 @@
-<div class="solution">
-    <table class="table">
-        <tr>
-            <td><label class="form-control" >Ticket Id</label></td>
-            <td><input type="number" class="form-control" [(ngModel)]="this.solution.ticketId"></td>
-        </tr>
-        <tr>
-            <td><label class="form-control" >Solution</label></td>
-            <td><input type="text" class="form-control" [(ngModel)]="this.solution.solutions"></td>
-        </tr>
-        <tr>
-            <td><button class="btn btn-success" (click)="raiseSolution()">Add Solution</button></td>
-            <td><button class="btn btn-danger">Cancel</button></td>
-        </tr>
-    </table>
-</div>
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                      style="width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">Provide solution for Tickets</h4>
+                  </div>
+                    
+  
+                    <div class="form-outline mb-4">
+                      <input type="number" id="form2Example11" class="form-control"
+                        [(ngModel)]="this.solution.ticketId" />
+                      <label class="form-label" for="form2Example11">Ticket Id</label>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="text" id="form2Example22" class="form-control"  [(ngModel)]="this.solution.solutions" />
+                      <label class="form-label" for="form2Example22">Solution</label>
+                    </div>
+  
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="raiseSolution()" type="button">Add Solution</button><br>
+                    </div>
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">We are more than just a company</h4>
+                  <p class="small mb-0">At our company, our motto for intern management is "Empowering Growth, Inspiring Success."
+                    We believe in providing interns with meaningful experiences that foster their professional development and personal growth.
+                    Through mentorship, challenging projects, and a supportive environment, we aim to inspire interns to reach their full potential.
+                    Our commitment to intern management ensures that every intern leaves with valuable skills, confidence, and a strong foundation for future success.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+

@@ -22,9 +22,11 @@ export class RaiseTicketComponent {
   this.internService.RaiseTicket(this.ticket).subscribe(data=>{
     this.ticketRaised=data as TicketModel;
     console.log(this.ticketRaised);
+    alert("Ticket Raised")
   },
   err=>{
     console.log(err);
+    alert("Cannot raise a ticket");
   }
   );
   

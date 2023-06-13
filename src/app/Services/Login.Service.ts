@@ -26,4 +26,11 @@ export class LoginService{
         });
         return this.httpclient.post("http://localhost:5274/api/Log/OutTime",log,{headers:header})
     }
+    ChangePassword(pass:LoggedInUserModel){
+        var header=new HttpHeaders({
+            'Content-Type':'application/json',
+            'Authorization':'Bearer '+localStorage.getItem("token")?.toString()
+        });
+        return this.httpclient.put("http://localhost:5058/api/User/Password",pass,{headers:header})
+    }
 }

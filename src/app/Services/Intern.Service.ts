@@ -22,4 +22,11 @@ export class InternService{
                 });
                 return this.httpClient.post("http://localhost:5274/api/TicketAndSolution/Ticket",ticket,{headers:header})
             }
+        GetSolutions(ticket:TicketModel):Observable<any>{
+                var header=new HttpHeaders({
+                    'Content-Type':'application/json',
+                    'Authorization':'Bearer '+localStorage.getItem("token")?.toString()
+                });
+                return this.httpClient.post("http://localhost:5274/api/TicketAndSolution/ByTicket",ticket,{headers:header})
+        }
 }

@@ -1,14 +1,13 @@
-<h1>Tickets</h1><br><br>
+<h1>Logs</h1><br><br>
     <table  id="table">
       <thead>
         <tr>
-          <th *ngFor="let header of _object.keys(tickets[0]); let i = index">{{header}}</th>
+          <th *ngFor="let header of _object.keys(logs[0]); let i = index">{{header}}</th>
         </tr>
       </thead>
       <tbody>
-        <tr border="2" *ngFor="let row of tickets; let i = index">
+        <tr border="2" *ngFor="let row of logs; let i = index">
           <th border="2" *ngFor="let objKey of _object.keys(row); let j = index">{{ row[objKey] }} </th>
         </tr>
       </tbody>
     </table>
-  

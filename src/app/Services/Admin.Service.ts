@@ -37,4 +37,11 @@ export class AdminService{
                 });
                 return this.httpClient.put("http://localhost:5058/api/User/Status",user,{headers:header});
         }
+        getAllLogs():Observable<any>{
+                var header=new HttpHeaders({
+                    'Content-Type':'application/json',
+                    'Authorization':'Bearer '+localStorage.getItem("token")?.toString()
+                });
+                return this.httpClient.get("http://localhost:5274/api/Log/All",{headers:header})
+        }
 }

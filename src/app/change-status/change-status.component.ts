@@ -18,9 +18,11 @@ export class ChangeStatusComponent {
     this.adminservice.approveIntern(this.user).subscribe(data=>{
       this.approvedUser=data as UserModel;
       console.log(this.approvedUser);
+      alert("approved");
     },
     err=>{
       console.log(err);
+      alert("Can't approve");
     });
  }
 }

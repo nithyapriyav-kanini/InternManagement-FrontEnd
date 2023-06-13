@@ -20,6 +20,7 @@ export class AddSolutionComponent {
    this.adminService.RaiseTicket(this.solution).subscribe(data=>{
     this.solutiongiven=data as SolutionModel;
     console.log(this.solutiongiven);
+    alert("Solution Added sucessfully");
    },
    err=>{
     console.log(err)

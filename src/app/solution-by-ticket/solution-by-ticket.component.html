@@ -1,4 +1,3 @@
-
 <section class="h-100 gradient-form" style="background-color: #eee;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -11,19 +10,18 @@
                   <div class="text-center">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                       style="width: 185px;" alt="logo">
-                    <h4 class="mt-1 mb-5 pb-1">Approve Interns</h4>
+                    <h4 class="mt-1 mb-5 pb-1">Solutions</h4>
                   </div>
                     
   
                     <div class="form-outline mb-4">
                       <input type="number" id="form2Example11" class="form-control"
-                        [(ngModel)]="this.user.userId" />
-                      <label class="form-label" for="form2Example11">Intern Id</label>
+                        [(ngModel)]="this.ticket.id" />
+                      <label class="form-label" for="form2Example11">Ticket Id</label>
                     </div>
   
-  
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="changeStatus()" type="button">Approve</button><br>
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" (click)="GetSolutions()" type="button">Get Solutions</button><br>
                     </div>
   
                 </div>
@@ -44,5 +42,18 @@
     </div>
   </section>
 
-
- 
+  <span id="solution" *ngIf="check">
+    <h1>Solutions</h1><br><br>
+  <table  id="table">
+    <thead>
+      <tr>
+        <th *ngFor="let header of _object.keys(solutions[0]); let i = index">{{header}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr border="2" *ngFor="let row of solutions; let i = index">
+        <th border="2" *ngFor="let objKey of _object.keys(row); let j = index">{{ row[objKey] }} </th>
+      </tr>
+    </tbody>
+  </table>
+  </span>

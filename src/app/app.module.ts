@@ -19,6 +19,11 @@ import { InternService } from './Services/Intern.Service';
 import { AdminService } from './Services/Admin.Service';
 import { GetAllTicketsComponent } from './get-all-tickets/get-all-tickets.component';
 import { LogOutComponent } from './log-out/log-out.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { AdminComponent } from './admin/admin.component';
+import { InternUserComponent } from './intern-user/intern-user.component';
+import { SolutionByTicketComponent } from './solution-by-ticket/solution-by-ticket.component';
+import { GetLogsComponent } from './get-logs/get-logs.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { LogOutComponent } from './log-out/log-out.component';
     GetTicketComponent,
     ChangeStatusComponent,
     GetAllTicketsComponent,
-    LogOutComponent
+    LogOutComponent,
+    ChangePasswordComponent,
+    AdminComponent,
+    InternUserComponent,
+    SolutionByTicketComponent,
+    GetLogsComponent
   ],
   imports: [
     BrowserModule,

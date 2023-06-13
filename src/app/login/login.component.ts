@@ -27,7 +27,14 @@ export class LoginComponent {
           localStorage.setItem("role",this.loggedInModel.role);
           var userid=this.loggedInModel.userId.toString();
           localStorage.setItem("id",userid);
+          alert("Login Successfull");
           this.LogInTime();
+          if(this.loggedInModel.role=="Admin"){
+            this.router.navigateByUrl('Admin');
+          }
+          else{
+            this.router.navigateByUrl('Intern');
+          }
         },
         err=>{
           console.log(err);

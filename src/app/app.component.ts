@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'InternManagement';
-  role:string;
-  check:Boolean=false;
-  constructor() {
-    this.role=localStorage.getItem("role");
-    if(this.role=="Admin"){
-        this.check=true;
-    }
-  }
+  constructor(private router:Router) {
+    this.router.navigateByUrl('login');
   
+  }
 }
